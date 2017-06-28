@@ -1,0 +1,10 @@
+@import 'color';
+@import 'typography';
+
+body {
+  background-color: $light-gray;
+};
+
+.box {
+  border: 1px solid $pure-black;
+}
