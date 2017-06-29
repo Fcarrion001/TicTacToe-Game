@@ -32,7 +32,52 @@
           <input type="password" name="credentials[password_confirmation]" placeholder="password confirmation">
         </fieldset>
       </form>
+      <form id="sign-in">
+              <fieldset>
+                <legend>Sign in!</legend>
+                <input type="submit" name="submit" value="Sign in!">
+                <input type="text" name=credentials[email] placeholder="email">
+                <input type="password" name='credentials[password]' placeholder="password">
+              </fieldset>
+            </form>
 
+            <form id="change-password">
+              <fieldset>
+                <legend>change password</legend>
+                <input type="submit" name="submit" value="Change password!">
+                <input type="password" name='passwords[old]' placeholder="old password">
+                <input type="password" name='passwords[new]' placeholder="new password">
+              </fieldset>
+            </form>
+
+            <form id="sign-out">
+              <fieldset>
+                <legend>sign out</legend>
+                <input type="submit" name="submit" value="sign out">
+              </fieldset>
+            </form>
+
+            <form id="new-game">
+              <fieldset>
+                <legend>New Game</legend>
+                <input type="submit" name="submit" value="new game">
+              </fieldset>
+            </form>
+
+            <form id="game-index">
+              <fieldset>
+                <legend>Game Index</legend>
+                <input type="submit" name="submit" value="game index">
+              </fieldset>
+            </form>
+
+            <!-- <form id="find-game">
+              <fieldset>
+                <legend>Find Game</legend>
+                <input type="submit" name="submit" value="find game">
+                <input type="text" name="game[id]" placeholder="game id">
+              </fieldset>
+            </form> -->
 
 
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
@@ -42,6 +87,13 @@
       velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
       cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
       est laborum.</p>
+<h3>Message Box</h3>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-2 box">
+    </div>
+  </div>
+</div>
 
   <div class="container" id="board">
     <div class="row">
@@ -57,7 +109,7 @@
     </div>
     <div class="row">
       <div class="col-xs-4 box 1" id="4">
-      
+
       </div>
       <div class="col-xs-4 box 2" id="5">
 
