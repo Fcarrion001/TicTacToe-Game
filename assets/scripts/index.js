@@ -17,7 +17,17 @@ $(() => {
   events.addHandlers()
 })
 
+const endGame = function () {
+  if (gameOver === true && turnNum !== 0) {
+  console.log('gameover')
+  console.log('player_x wins')
 
+} else if (gameOver === true) {
+    console.log('gameover')
+    console.log('player_o wins')
+
+  }
+}
 //create function to input "X" and "O" values for game
 // define variable to keep track of turn
 let turnNum = 0
@@ -50,15 +60,14 @@ $(() => {
       if (valuesArray.indexOf(tic) !== -1
           && valuesArray.indexOf(tac) !== -1
           && valuesArray.indexOf(toe) !== -1) {
-        console.log('you win')
         gameOver = true
       }
+      endGame()
     }
 
-
+console.log('this is turnNum', turnNum)
     // prevent inputing values if game has ended
       if (gameOver === true) {
-        console.log('gameover')
         return
     // prevent inputing a value on a square the has been used already
     }  else if (textValue === 'X' || textValue === 'O') {
@@ -78,7 +87,7 @@ $(() => {
         console.log('this is xValues', xValues)
         console.log('this is event.target', event.target)
       }
-    
+
       //invoke the function to check of a winner
       checkForMatch(xValues, '1', '2', '3')
       checkForMatch(oValues, '1', '2', '3')

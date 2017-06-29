@@ -50,6 +50,9 @@ const onSignUp = function(event) {
       console.log(this)
       api.signOut(data)
     }
+
+
     module.exports = {
-      addHandlers
+      addHandlers,
+
     }
