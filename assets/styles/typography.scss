@@ -18,5 +18,18 @@ body {
 .col-xs-4 {
   height: 100px;
   width: 20%;
-  margin:  auto;
+  margin: auto;
+  padding: 0 $horizontal-padding;
+}
+
+.col-xs-2 {
+  height: 200px;
+  width: 30%;
+  margin: auto;
+  float: left;
+}
+
+.container {
+  margin: $verticle-margin;
+
 }

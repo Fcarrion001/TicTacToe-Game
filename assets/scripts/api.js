@@ -46,7 +46,7 @@ const signOut = function (data) {
 
 const newGame = function (data) {
   return $.ajax({
-    url: config.apiOrigin + '/games/' + store.user.id,
+    url: config.apiOrigin + '/games',
     method: 'POST',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -54,10 +54,47 @@ const newGame = function (data) {
     data
   })
 }
+
+const gameIndex = function () {
+  return $.ajax({
+    url: config.apiOrigin + '/games',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
+// const findGame = function (data) {
+//   console.log('data is', data)
+//   return $.ajax({
+//     url: config.apiOrigin + '/games/' + data.id,
+//     method: 'GET',
+//     headers: {
+//       Authorization: 'Token token=' + store.user.token
+//     }
+//   })
+// }
+
+const updateGame = function (data) {
+  console.log('data is', data)
+  return $.ajax({
+    url: config.apiOrigin + '/games/' + store.game.id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
   changePassword,
   signOut,
-  newGame
+  newGame,
+  gameIndex,
+  // findGame,
+  updateGame
 }
