@@ -14,9 +14,42 @@ const onSignUp = function(event) {
     api.signUp(data)
     .then(ui.signInSuccess)
     .catch(ui.signInSuccess)
+  }
 
-}
+    const addHandlers = () => {
+      $('#sign-up').on('submit', onSignUp)
+      $('#sign-in').on('submit', onSignIn)
+      $('#change-password').on('submit', onChangePassword)
+      $('#sign-up')
+    }
 
-module.exports = {
-  onSignUp
-}
+    const onSignIn = function (event) {
+      const data = getFormFields(this)
+      console.log('this is ', this)
+      console.log(data)
+      event.preventDefault()
+      api.signIn(data)
+        .then(ui.signInSuccess)
+        .catch(ui.signUpFailur)
+    }
+
+    const onChangePassword = function (event) {
+      const data = getFormFields(this)
+      event.preventDefault()
+      console.log('this is store:', store)
+      console.log(this)
+      api.changePassword(data)
+        .then(ui.changePasswordSuccess)
+        .catch(ui.changePasswordFailure)
+    }
+
+    const OnSignOut = function (event) {
+      const data = getFormFields(this)
+      event.preventDefault()
+      console.log(data)
+      console.log(this)
+      api.signOut(data)
+    }
+    module.exports = {
+      addHandlers
+    }

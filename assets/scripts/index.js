@@ -14,17 +14,18 @@ $(() => {
 const events = require('./events.js')
 
 $(() => {
-  $('#sign-up').on('submit', events.onSignUp)
+  events.addHandlers()
 })
 
 
 //create function to input "X" and "O" values for game
 // define variable to keep track of turn
 let turnNum = 0
+let gameOver = false
 //created empty arrays to hold the game-squares selected
 const xValues = []
 const oValues = []
-$((ticTacToe) => {
+$(() => {
   $('#board').on('click', function(event) {
     event.preventDefault()
     const idOfPick = event.target.id
@@ -47,18 +48,20 @@ $((ticTacToe) => {
       // let toe = winningNumbers[i][2]
       // match arguments with valuesArray to check for winner
       if (valuesArray.indexOf(tic) !== -1
-      && valuesArray.indexOf(tac) !== -1
-      && valuesArray.indexOf(toe) !== -1) {
+          && valuesArray.indexOf(tac) !== -1
+          && valuesArray.indexOf(toe) !== -1) {
         console.log('you win')
-
+        gameOver = true
       }
     }
 
 
-
-
+    // prevent inputing values if game has ended
+      if (gameOver === true) {
+        console.log('gameover')
+        return
     // prevent inputing a value on a square the has been used already
-      if (textValue === 'X' || textValue === 'O') {
+    }  else if (textValue === 'X' || textValue === 'O') {
         console.log('pick a valid square')
     // determine turn by checking if turn Number is even or odd
     } else if (turnNum % 2 !== 0) {
@@ -75,6 +78,7 @@ $((ticTacToe) => {
         console.log('this is xValues', xValues)
         console.log('this is event.target', event.target)
       }
+    
       //invoke the function to check of a winner
       checkForMatch(xValues, '1', '2', '3')
       checkForMatch(oValues, '1', '2', '3')
