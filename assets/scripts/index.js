@@ -16,6 +16,3 @@ const events = require('./events.js')
 $(() => {
   events.addHandlers()
 })
-
-// create function to input "X" and "O" values for game
-// define variable to keep track of turn

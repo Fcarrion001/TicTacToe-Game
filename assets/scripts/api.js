@@ -5,7 +5,6 @@ const store = require('./store')
 const config = require('./config')
 
 const signUp = function (data) {
-  console.log('api data is: ', data)
   return $.ajax({
     url: config.apiOrigin + '/sign-up',
     method: 'POST',
@@ -22,7 +21,6 @@ const signIn = function (data) {
 }
 
 const changePassword = function (data) {
-  console.log('this is store', store)
   return $.ajax({
     url: config.apiOrigin + '/change-password/' + store.user.id,
     method: 'PATCH',
@@ -77,7 +75,6 @@ const gameIndex = function () {
 // }
 
 const updateGame = function (data) {
-  console.log('data is', data)
   return $.ajax({
     url: config.apiOrigin + '/games/' + store.game.id,
     method: 'PATCH',

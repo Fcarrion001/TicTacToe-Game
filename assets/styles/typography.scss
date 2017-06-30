@@ -3,13 +3,13 @@ $body-font-size: 18px;
 $verticle-margin: 40px;
 $body-width: auto;
 $horizontal-padding: 10px;
-$header-height: 100px;
+$header-height: 300px;
 $footer-height: 30px;
 
 body {
   line-height: $line-height;
   font-size: $body-font-size;
-  padding: 0 $horizontal-padding;
+  padding: 20 $horizontal-padding;
   max-width: $body-width;
   margin: $verticle-margin auto;
   display: block;
@@ -20,9 +20,10 @@ body {
   width: 20%;
   margin: auto;
   padding: 0 $horizontal-padding;
+
 }
 
-.col-xs-2 {
+.message-box {
   height: 200px;
   width: 30%;
   margin: auto;
@@ -31,5 +32,16 @@ body {
 
 .container {
   margin: $verticle-margin;
+}
 
+h1 {
+  height: 100px;
+  font-family: cursive;
+  font-size: 100px;
+  text-align: center;
+}
+
+header {
+  background-color: lightblue;
+  header: $header-height;
 }

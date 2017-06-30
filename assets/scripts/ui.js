@@ -3,7 +3,7 @@
 const store = require('./store')
 
 const signUpSuccess = (data) => {
-  console.log(data)
+  $('.message-box').text('Congrats You Signed Up')
 }
 
 const failure = (error) => {
@@ -11,23 +11,20 @@ const failure = (error) => {
 }
 
 const signInSuccess = (data) => {
-  console.log('signed in')
-  console.log('this is data', data)
+  $('.message-box').text('You are signed in')
   store.user = data.user
 }
 
 const changePasswordSuccess = (data) => {
-  console.log('change pw success')
-  console.log(store.user)
+  $('.message-box').text('Password changed')
 }
 
 const changePasswordFailure = (data) => {
-  console.log('you failed to change')
+  $('.message-box').text('That didnt work')
 }
 
 const newGameSuccess = (data) => {
-  console.log('new game success')
-  console.log(data.game)
+  $('.message-box').text('New Game')
   store.game = data.game
 }
 
@@ -36,8 +33,7 @@ const newGameFail = (data) => {
 }
 
 const gameIndexSuccess = (data) => {
-  console.log('game index success')
-  console.log(data.games)
+  $('.message-box').text('You have played ' + data.games.length + ' games')
 }
 
 // const findGameSuccess = (data) => {
@@ -46,10 +42,11 @@ const gameIndexSuccess = (data) => {
 //   store.game = data.game
 // }
 
-const updateGameSuccess = (data) => {
-  console.log(data.game)
-  console.log('success')
-}
+// const updateGameSuccess = (data) => {
+//   console.log(data.game)
+//   console.log('success')
+// }
+
 module.exports = {
   signUpSuccess,
   failure,
@@ -58,7 +55,7 @@ module.exports = {
   changePasswordSuccess,
   newGameSuccess,
   newGameFail,
-  gameIndexSuccess,
+  gameIndexSuccess
   // findGameSuccess,
-  updateGameSuccess
+  // updateGameSuccess
 }
