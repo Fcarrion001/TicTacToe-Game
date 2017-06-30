@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Tic-Tac-Toe</title>
 
 
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,17 +15,12 @@
     </head>
     <body class="container-fluid">
 
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-1 box">
+      <header>
             <h1>Tic-Tac-Toe</h1>
-          </div>
-        </div>
-      </div>
+      </header>
 
       <form id="sign-up">
         <fieldset>
-          <legend>Sign up!</legend>
           <input type="submit" name="submit" value="Sign up!">
           <input type="text" name=credentials[email] placeholder="email">
           <input type="password" name='credentials[password]' placeholder="password">
@@ -34,7 +29,6 @@
       </form>
       <form id="sign-in">
               <fieldset>
-                <legend>Sign in!</legend>
                 <input type="submit" name="submit" value="Sign in!">
                 <input type="text" name=credentials[email] placeholder="email">
                 <input type="password" name='credentials[password]' placeholder="password">
@@ -43,7 +37,6 @@
 
             <form id="change-password">
               <fieldset>
-                <legend>change password</legend>
                 <input type="submit" name="submit" value="Change password!">
                 <input type="password" name='passwords[old]' placeholder="old password">
                 <input type="password" name='passwords[new]' placeholder="new password">
@@ -52,25 +45,12 @@
 
             <form id="sign-out">
               <fieldset>
-                <legend>sign out</legend>
                 <input type="submit" name="submit" value="sign out">
               </fieldset>
             </form>
-
-            <form id="new-game">
-              <fieldset>
-                <legend>New Game</legend>
-                <input type="submit" name="submit" value="new game">
-              </fieldset>
-            </form>
-
-            <form id="game-index">
-              <fieldset>
-                <legend>Game Index</legend>
-                <input type="submit" name="submit" value="game index">
-              </fieldset>
-            </form>
-
+          </div>
+        </div>
+      </div>
             <!-- <form id="find-game">
               <fieldset>
                 <legend>Find Game</legend>
@@ -78,19 +58,38 @@
                 <input type="text" name="game[id]" placeholder="game id">
               </fieldset>
             </form> -->
+      <p> This is a game called tic-tac-toe. The rules are very simple.
+        firts you gotta tic, then you gotta tac, no hear comes the tricky
+        part, then you gotta toe.  You are assigned either an x or an o. Players
+        take turns placing letters on the board. Get three of your letters lineed
+        up in a row, before your opponents can to win.</p>
 
+        <p>Keep track of how many games you have played by signing up. You can see
+          the number in the message box by clicking on the find index
+          button.
+        </p>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-      ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.</p>
+        <p>If I need to explain the other buttons the internet is not for you. Put
+        the electronic device down immeadiatley, and walk away.<p>
+
+        <p>Enjoy!</p>
+
+        <form id="new-game">
+          <fieldset>
+            <input type="submit" name="submit" value="new game">
+          </fieldset>
+        </form>
+
+        <form id="game-index">
+          <fieldset>
+            <input type="submit" name="submit" value="game index">
+          </fieldset>
+        </form>
+
 <h3>Message Box</h3>
 <div class="container">
   <div class="row">
-    <div class="col-xs-2 box">
+    <div class="col-xs-2 box message-box">
     </div>
   </div>
 </div>

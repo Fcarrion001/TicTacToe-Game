@@ -7,4 +7,14 @@ body {
 
 .box {
   border: 1px solid $pure-black;
+  background-color: $pure-white;
+}
+
+.message-box {
+background-color: $pure-white;
+}
+
+
+form {
+  color: red;
 }
