@@ -48,3 +48,6 @@ to something I could do.The issue criteria was intimidating and I did not ask
 for help for the majority of the first two days.
 I strategized by writing out what I wanted to do, and trial-and-error. I used the
 console.log function and debugger as well.
+
+url to site
+https://fcarrion001.github.io/TicTacToe-Game/
