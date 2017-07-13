@@ -42,12 +42,26 @@ reduce redundancies
 Development Story:
 
 Absolute chaos.  My gameplan was nieve and lacking in detail.  I would have
-benefitedgreatly from detailed planning.  I worked on game logic for the
-majority of the time.  I got stuck and fixed on the problem instead of moving on
-to something I could do.The issue criteria was intimidating and I did not ask
+benefited greatly from detailed planning.  I worked on game logic for the
+majority of the time.  I got stuck and fixated on the problem instead of moving on
+to something I could do. The issue-making criteria was intimidating and I did not ask
 for help for the majority of the first two days.
-I strategized by writing out what I wanted to do, and trial-and-error. I used the
-console.log function and debugger as well.
+
+I strategized by writing out what I wanted to do, and through trial-and-error.
+I used console.log and the debugger as well.
+
+Improvements and Bug Fixes
+
+Date 7/13/2017
+
+  1. Made it impossible to play the game without signing in and clicking
+     new game.
+  2. Fixed a bug that kept user email and password in input fields, even after
+     signing out.
+  3. Made it so the message box is clear of text when signing out.
+  4. Corrected the url used for api ajax requests when in production. Users
+     should now be able to sign-up, sign-in, and sign-out
+  5. Fixed various typos and inconsistencies in the html and README.md files
 
 url to site
 https://fcarrion001.github.io/TicTacToe-Game/

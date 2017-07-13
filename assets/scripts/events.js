@@ -1,9 +1,15 @@
 'use strict'
 
-const store = require('./store')
+// const store = require('./store')
 const getFormFields = require('../../lib/get-form-fields')
 const api = require('./api')
 const ui = require('./ui')
+
+// create functions to hide and show the board when user not signed in
+const hideBoard = () => $('#board').hide()
+const showBoard = $('#board').show()
+// hide the board by default
+hideBoard()
 // made a function to be invoked when clicking submit in the sign-up section
 const onSignUp = function (event) {
   event.preventDefault()
@@ -27,7 +33,6 @@ const addHandlers = () => {
 // function for signing in
 const onSignIn = function (event) {
   const data = getFormFields(this)
-
   event.preventDefault()
   api.signIn(data)
     .then(ui.signInSuccess)
@@ -45,9 +50,12 @@ const onChangePassword = function (event) {
 
 const onSignOut = function (event) {
   const data = getFormFields(this)
+
+  hideBoard()
   event.preventDefault()
 
   api.signOut(data)
+  .then(ui.signOutSuccess)
 }
 
 let turnNum = 0
@@ -88,8 +96,8 @@ const onNewGame = function (event) {
 const checkForMatch = function (valuesArray, tic, tac, toe) {
   // match arguments with valuesArray to check for winner
   if (valuesArray.indexOf(tic) !== -1 &&
-    valuesArray.indexOf(tac) !== -1 &&
-    valuesArray.indexOf(toe) !== -1) {
+      valuesArray.indexOf(tac) !== -1 &&
+      valuesArray.indexOf(toe) !== -1) {
     gameOver = true
   }
 }
@@ -130,7 +138,7 @@ const onUpdateGame = function (event) {
   event.preventDefault()
   // switch turns and turn off when there is a winner
   turnSwitch()
-  // invoke the function to check of a winner
+  // invoke the function to check for a winner
   checkForMatch(xValues, '1', '2', '3')
   checkForMatch(oValues, '1', '2', '3')
   checkForMatch(xValues, '1', '5', '9')
@@ -176,5 +184,6 @@ const onGameIndex = function (event) {
 }
 
 module.exports = {
-  addHandlers
+  addHandlers,
+  showBoard
 }
