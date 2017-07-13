@@ -1,7 +1,6 @@
 'use strict'
 
 const store = require('./store')
-
 const signUpSuccess = (data) => {
   $('.message-box').text('Congrats You Signed Up')
 }
@@ -24,6 +23,7 @@ const changePasswordFailure = (data) => {
 }
 
 const newGameSuccess = (data) => {
+  $('#board').show()
   $('.message-box').text('New Game')
   store.game = data.game
 }
@@ -36,6 +36,10 @@ const gameIndexSuccess = (data) => {
   $('.message-box').text('You have played ' + data.games.length + ' games')
 }
 
+const signOutSuccess = (data) => {
+  $('.input').val('')
+  $('.message-box').text('')
+}
 // const findGameSuccess = (data) => {
 //   console.log(data.game)
 //   console.log('success')
@@ -55,7 +59,8 @@ module.exports = {
   changePasswordSuccess,
   newGameSuccess,
   newGameFail,
-  gameIndexSuccess
+  gameIndexSuccess,
+  signOutSuccess
   // findGameSuccess,
   // updateGameSuccess
 }

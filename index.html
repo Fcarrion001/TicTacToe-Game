@@ -1,97 +1,91 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Tic-Tac-Toe</title>
+
+<head>
+  <title>Tic-Tac-Toe</title>
 
 
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags unless you know what you are doing -->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <!-- Do not add `link` tags unless you know what you are doing -->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-      <!-- Do not add `script` tags unless you know what you are doing -->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body class="container-fluid">
+  <!-- Do not add `script` tags unless you know what you are doing -->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
 
-      <header>
-            <h1>Tic-Tac-Toe</h1>
-      </header>
+<body class="container-fluid">
 
-      <form id="sign-up">
-        <fieldset>
-          <input type="submit" name="submit" value="Sign up!">
-          <input type="text" name=credentials[email] placeholder="email">
-          <input type="password" name='credentials[password]' placeholder="password">
-          <input type="password" name="credentials[password_confirmation]" placeholder="password confirmation">
-        </fieldset>
-      </form>
+  <header>
+    <h1>Tic-Tac-Toe</h1>
+  </header>
 
-      <form id="sign-in">
-              <fieldset>
-                <input type="submit" name="submit" value="Sign in!">
-                <input type="text" name=credentials[email] placeholder="email">
-                <input type="password" name='credentials[password]' placeholder="password">
-              </fieldset>
-            </form>
+  <form id="sign-up">
+    <fieldset>
+      <input type="submit" name="submit" value="Sign up!">
+      <input type="text" name=credentials[email] class="input" placeholder="email">
+      <input type="password" name='credentials[password]' class="input" placeholder="password">
+      <input type="password" name="credentials[password_confirmation]" class="input" placeholder="password confirmation">
+    </fieldset>
+  </form>
 
-            <form id="change-password">
-              <fieldset>
-                <input type="submit" name="submit" value="Change password!">
-                <input type="password" name='passwords[old]' placeholder="old password">
-                <input type="password" name='passwords[new]' placeholder="new password">
-              </fieldset>
-            </form>
+  <form id="sign-in">
+    <fieldset>
+      <input type="submit" name="submit" value="Sign in!">
+      <input type="text" name=credentials[email] class="input" placeholder="email">
+      <input type="password" name='credentials[password]' class="input" placeholder="password">
+    </fieldset>
+  </form>
 
-            <form id="sign-out">
-              <fieldset>
-                <input type="submit" name="submit" value="sign out">
-              </fieldset>
-            </form>
+  <form id="change-password">
+    <fieldset>
+      <input type="submit" name="submit" value="Change password!">
+      <input type="password" name='passwords[old]' class="input" placeholder="old password">
+      <input type="password" name='passwords[new]' class="input" placeholder="new password">
+    </fieldset>
+  </form>
 
-            <!-- <form id="find-game">
+  <form id="sign-out">
+    <fieldset>
+      <input type="submit" name="submit" value="sign out">
+    </fieldset>
+  </form>
+
+  <!-- <form id="find-game">
               <fieldset>
                 <legend>Find Game</legend>
                 <input type="submit" name="submit" value="find game">
                 <input type="text" name="game[id]" placeholder="game id">
               </fieldset>
             </form> -->
-      <p> This is a game called tic-tac-toe. The rules are very simple.
-        firts you gotta tic, then you gotta tac, no hear comes the tricky
-        part, then you gotta toe.  You are assigned either an x or an o. Players
-        take turns placing letters on the board. Get three of your letters lineed
-        up in a row, before your opponents can to win.</p>
+  <p> This is a game called tic-tac-toe. The rules are very simple. firts you gotta tic, then you gotta tac, no hear comes the tricky part, then you gotta toe. You are assigned either an x or an o. Players take turns placing letters on the board. Get three
+    of your letters lineed up in a row, before your opponents can to win.</p>
 
-        <p>Keep track of how many games you have played by signing up. You can see
-          the number in the message box by clicking on the find index
-          button.
-        </p>
+  <p>Keep track of how many games you have played by signing up. You can see the number in the message box by clicking on the  game index button.
+  </p>
 
-        <p>If I need to explain the other buttons the internet is not for you. Put
-        the electronic device down immeadiatley, and walk away.</p>
+  <p>Enjoy!</p>
 
-        <p>Enjoy!</p>
+  <form id="new-game">
+    <fieldset>
+      <input type="submit" name="submit" value="new game">
+    </fieldset>
+  </form>
 
-        <form id="new-game">
-          <fieldset>
-            <input type="submit" name="submit" value="new game">
-          </fieldset>
-        </form>
+  <form id="game-index">
+    <fieldset>
+      <input type="submit" name="submit" value="game index">
+    </fieldset>
+  </form>
 
-        <form id="game-index">
-          <fieldset>
-            <input type="submit" name="submit" value="game index">
-          </fieldset>
-        </form>
-
-<h3>Message Box</h3>
-<div class="container">
-  <div class="row">
-    <div class="col-xs-2 box message-box">
+  <h3>Message Box</h3>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-2 box message-box">
+      </div>
     </div>
   </div>
-</div>
 
   <div class="container" id="board">
     <div class="row">
@@ -129,5 +123,6 @@
     </div>
   </div>
 
-    </body>
+</body>
+
 </html>
